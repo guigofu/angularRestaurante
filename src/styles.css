@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+/* specifica que el padding no supere el 100% (no scroll?) */
+* {
+    box-sizing: border-box
+}
+body, html {
+    padding: 0px;
+    margin: 0px;
+}
