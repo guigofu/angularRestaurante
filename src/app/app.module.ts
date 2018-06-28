@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
+import { FechaPipe } from './pipes/fecha.pipe';
+import { WeekComponent } from './components/week/week.component';
 
 @NgModule({
   // Componentes, Pipes o Directivas que son visibles en el módulo
   declarations: [
-    AppComponent, ToolbarComponent, CardComponent
+    AppComponent, ToolbarComponent, CardComponent, FechaPipe, WeekComponent,
   ],
   // Importamos módulos. (Servicios, componentes, directivas)
   imports: [

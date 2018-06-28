@@ -1,11 +1,11 @@
 .card{
-    box-shadow: 3 3 7 rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     margin: 10px;
 }
 
 .card:hover{
-    box-shadow: 4 4 7 rgba(0, 0, 0, 0.5)
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.5)
 }
 
 .card img{

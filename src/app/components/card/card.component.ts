@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Menu } from '../../services/menu.service';
 
 @Component({
@@ -9,10 +9,15 @@ import { Menu } from '../../services/menu.service';
 export class CardComponent implements OnInit {
 
   @Input() menu: Menu;
+  @Output() selected: EventEmitter<Menu> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    this.selected.emit(this.menu);
   }
 
 }

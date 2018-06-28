@@ -1,0 +1,7 @@
+<div class="week">
+  <ul class="day" *ngFor="let d of week; index as i">
+    <li>{{dayNames[i]}}</li>
+    <li>{{d.chef}}</li>
+    <li *ngFor="let m of d.menu">{{m}}</li>
+  </ul>
+</div>

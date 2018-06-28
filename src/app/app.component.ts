@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuService, Menu } from './services/menu.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   // Etiqueta para usar el componente
@@ -16,9 +17,18 @@ import { MenuService, Menu } from './services/menu.service';
 export class AppComponent {
   title = 'app';
   data: Menu[] = [];
+  loading = false;
 
   constructor(service: MenuService) {
+    this.loading = true;
     service.loadMenu()
-    .subscribe(x => this.data = x);
+      .pipe(
+        finalize(() => this.loading = false)
+      )
+      .subscribe(x => this.data = x, err => console.log(err));
+  }
+
+  showName(menu: Menu) {
+    alert(menu.chef);
   }
 }

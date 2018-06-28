@@ -7,3 +7,31 @@ body, html {
     padding: 0px;
     margin: 0px;
 }
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row .item
+{
+    flex: 1;
+    min-width: 280px;
+}
+
+.btn-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: #cddc39;
+    color: white;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 2em;
+}

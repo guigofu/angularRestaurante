@@ -1,22 +1,19 @@
 <app-toolbar [title]="'Angular foods'"></app-toolbar>
-
+<app-week></app-week>
 <h2>Galería</h2>
 
 <!-- <app-card *ngFor="let d of data" [menu]="d"></app-card> -->
 
-<div class="contenedor">
-    
-    <div class="hijo uno">
-        
+<div class="row" *ngIf="!loading; else cargando">
+    <div class="item" *ngFor="let d of data">
+        <app-card [menu]="d" (selected)="showName($event)"></app-card>
     </div>
+</div>
 
-    <div class="hijo dos">
+<ng-template #cargando>
+    Cargando...
+</ng-template>
 
-    </div>
-    
-    <div class="hijo tres">
-
-    </div>
-    
-
+<div class='btn-add'>
+    +
 </div>

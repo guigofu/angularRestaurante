@@ -1,7 +1,10 @@
-<div class="card">
+<div class="card" (click)="onClick()">
   <img src="{{ menu.img }}" alt="">
   <div>
     <h4>{{ menu.chef }}</h4>
-    <p> {{ menu.date }}</p>
+    <!-- using angular date pipe -->
+    <p> {{ menu.date | date: 'dd/MM/yyyy'}}</p> 
+    <!-- using created 'fecha' pipe -->
+    <!-- <p> {{ menu.date | fecha}}</p>  -->
   </div>
 </div>

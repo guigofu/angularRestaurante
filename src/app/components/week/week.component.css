@@ -1,0 +1,26 @@
+.week{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.day{
+    list-style: none;
+    flex: 1;
+    padding: 10px;
+}
+
+.day li{
+    text-align: center;
+    background: #ccc
+}
+
+.day li:first-child{
+    color: white;
+    background: #cddc39;
+}
+
+.day li:nth-child(2){
+    color: white;
+    background: #777;
+}
