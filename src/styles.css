@@ -34,4 +34,5 @@ body, html {
     right: 20px;
     bottom: 20px;
     font-size: 2em;
+    cursor: pointer;
 }
